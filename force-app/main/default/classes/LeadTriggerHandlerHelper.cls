@@ -2,9 +2,9 @@
 *Developer by : Umesh Mor.
 *Description : Lead Trigger handler......
 ***/
-public class LeadTriggerHandler {
+public class LeadTriggerHandlerHelper {
     /***
-    *Description : Lead Trigger handler - handles before insert
+    *Description : Lead Trigger handler - handles before insert..
     ***/
     public string missingFields = '';
     public void handlBeforeInsert(list<lead>leadList){ 
