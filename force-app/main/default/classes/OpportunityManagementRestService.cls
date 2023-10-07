@@ -34,19 +34,14 @@ global with sharing class OpportunityManagement{
             System.debug('Record couldnt get inserted : error message '+ex.getMessage());
             returnStatement = 'record inserted succesfully, record id is:'+oppRecToInsert.Id;
         }
-        retun returnStatement;
+        return returnStatement;
     }
     
     @httpDelete
-    global static string deleteTodaysCreatedOppRecord(){
-        delete [SELECT Id FROM Opportunity WHERE createdDate = Today()];
+    global static void deleteTodaysCreatedOppRecord(){
+        delete [SELECT Id FROM Opportunity WHERE createdDate = Today];
     }
-    
-    @httpPut
-    global static string upsertRecords(OpportunityInformation oppData){
-        upsert oppData.opp;
-    }
-    
+     
     
     global Class OpportunityInformation{
         global Opportunity opp{get;set;}
