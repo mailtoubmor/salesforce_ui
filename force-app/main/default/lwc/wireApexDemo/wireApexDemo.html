@@ -1,0 +1,9 @@
+<template>
+    <template lwc:if={accounts.data}>
+        <template for:each={accounts.data} for:item="account">
+            <div key={account.id} class="account-div">
+                <p class="para">{account.Name}</p>
+            </div>
+        </template>
+    </template>
+</template>
