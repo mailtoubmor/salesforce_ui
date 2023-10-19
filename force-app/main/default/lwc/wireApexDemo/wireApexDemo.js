@@ -4,6 +4,10 @@ export default class WireApexDemo extends LightningElement {
     @wire(fetchAccountDetails)
     accounts;
     connectedCallback(){
-        console.log('Accounts fetched==='+JSON.stringify(this.accounts));
+        
+    }
+
+    renderedCallback(){
+        console.log('Data'+JSON.stringify(this.accounts.data));
     }
 }
