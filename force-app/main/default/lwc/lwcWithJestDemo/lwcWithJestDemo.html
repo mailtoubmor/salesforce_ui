@@ -1,5 +1,9 @@
 <template>
-    <p>
-        {message}
-    </p>
+    <lightning-button class="render-btn"  onclick={handleBtnClick}></lightning-button>
+    <template lwc:if={showPara}>
+        <p class="new-para">
+            {message}
+        </p>
+    </template>
+    <p class="newPara">{message}</p>
 </template>
