@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-box bg-color">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col" >
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="First Name" name = "firstName" onchange={handleOnchange}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-col">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="Last Name" name = "lastName" onchange={handleOnchange}></lightning-input>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">                
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="Phone" name = "Phone" onchange={handleOnchange}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-col">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="Enter email" name = "Email" onchange={handleOnchange}></lightning-input>
+                </div>
+            </div>
+        </div>  
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-m-left_large">
+                <lightning-button variant="brand" width = "50%" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>   
+            </div>
+        </div> 
+    </div>  
+</template>
