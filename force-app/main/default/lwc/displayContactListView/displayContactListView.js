@@ -23,15 +23,20 @@ const columns = [
     }
 ]
 export default class DisplayContactListView extends LightningElement {
-    contactList ;
+    contactList  ;
+    columns = columns;
     @wire(getContactList)
     contacts({data,error}){
         if(data){
             this.contactList = data;
-            console.log('DATA'+JSON.stringify(data))
+            console.log('DATA..'+JSON.stringify(data))
         }
         else if(error){
             console.log('ERROR'+JSON.stringify(error))
         }
+    }
+
+    getSelectedName(event){
+        console.log('Row Selected'+event);
     }
 }

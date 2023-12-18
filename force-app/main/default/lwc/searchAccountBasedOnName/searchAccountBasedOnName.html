@@ -1,0 +1,26 @@
+<template>
+    <div class="slds-box">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_2-of-3">
+                <lightning-input type="text" label="Enter account name" placeholder="Enter search term" onchange={handleInputSearchChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3 button">
+                <lightning-button variant="brand" label="Search Account" title="Search Account" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </div>
+        <template if:true={contactDataExists}>
+            <lightning-datatable    
+                data={contactList}
+                columns={columns}
+                key-field="Id"
+                onrowselection={getSelectedName}
+                >
+            </lightning-datatable>
+        </template>
+        <template if:false={contactDataExists}>
+            <div class="slds-p-around_medium lgc-bg">
+                <p>No Contact data display</p>
+            </div>
+        </template>
+    </div>
+</template>
