@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+   <aura:attribute name="phone" type="string" default="123"></aura:attribute>
+    <div class="myStyle">
+    <h1>Fill in form</h1>
+     <lightning:input name="input2" label="Enter name" value=""/>
+     <lightning:input name="input3" label="Enter phone" placeholder="phone" value="{!v.phone}" onchange="{!c.myAction}"/>
+  	{!v.phone}
+    </div>
+</aura:component>

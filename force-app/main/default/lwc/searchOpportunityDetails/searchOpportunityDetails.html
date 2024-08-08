@@ -1,0 +1,18 @@
+<template>
+    <!-- Default/basic -->
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Enter some Search Term" placeholder="enter search term" maxlength="90" onchange={handleOnchange}></lightning-input>
+    </div>   
+    <template if:true={doesDataExists}>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={data}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </template>
+    <template if:false={doesDataExists}>
+        No data to display
+    </template>
+</template>

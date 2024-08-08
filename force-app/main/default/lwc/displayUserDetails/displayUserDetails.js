@@ -1,8 +1,8 @@
 import { LightningElement } from 'lwc';
-import CONTACT_FIRSTNAME from '@salesforce/schema/contact.FirstName';
-import CONTACT_PHONE from '@salesforce/schema/contact.Phone';
-import CONTACT_LASTNAME from '@salesforce/schema/contact.LastName';
-import CONTACT_EMAIL from '@salesforce/schema/contact.Email';
+import CONTACT_FIRSTNAME from '@salesforce/schema/Contact.FirstName';
+import CONTACT_PHONE from '@salesforce/schema/Contact.Phone';
+import CONTACT_LASTNAME from '@salesforce/schema/Contact.LastName';
+import CONTACT_EMAIL from '@salesforce/schema/Contact.Email';
 import createContact from '@salesforce/apex/CreateContacts.createContact';
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 export default class DisplayUserDetails extends LightningElement {

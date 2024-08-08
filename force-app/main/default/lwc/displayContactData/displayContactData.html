@@ -1,0 +1,9 @@
+<template>
+    <div class="container">
+        <template for:each={conList.data} for:item="conrec">
+            <div key={conrec.Id}>
+                {conrec.FirstName} {conrec.LastName}
+            </div>
+        </template>
+    </div>
+</template>

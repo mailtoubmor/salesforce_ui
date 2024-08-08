@@ -1,0 +1,34 @@
+<template>
+    <div class="container">
+        <lightning-card>
+            <div class="slds-m-around_large">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type = "text" name="searchTerm" title="Enter search criteria" label="Enter the search term" onchange={handleInputChange} required></lightning-input>
+                </div>
+            </div>
+            <template if:true={dataPresentToDisplay}>
+                <div class="slds-m-around_large">
+                    <lightning-datatable
+                        key-field="id"
+                        data={visibleOpportunities}
+                        columns={oppColumns}
+                        onrowaction={handleRowAction}
+                        column-widths-mode="auto">
+                    </lightning-datatable>
+                </div> 
+                <div slot="footer" class="slds-var-m-vertical_medium">
+                    <div slot="footer" class="slds-var-m-vertical_medium">
+                        <c-pagination records={oppData} onupdate={updateContactHandler}></c-pagination>
+                    </div>   
+                </div>
+            </template>
+        </lightning-card>
+        <template if:false={dataPresentToDisplay}>
+            <div class="slds-m-around_large slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1">
+                    <span>No data to display</span>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
